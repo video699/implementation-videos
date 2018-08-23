@@ -48,7 +48,8 @@
       framerate of the video in frames per second, the total number
       of frames (which, combined with the previous information
       gives the total duration in seconds), and the video width and
-      height in pixels.</xs:documentation>
+      height in pixels. The datetime attribute specifies the date
+      and time at which the video was recorded.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element představuje
       zaznamenané video. Název adresáře obsahujícího další soubory
       související s videem je zadán atributem dirname a URI
@@ -56,7 +57,8 @@
       frames, width a height potom zadávají informace o počtu
       snímků za sekundu, celkovém počtu snímků (a tedy s předchozí
       informací informaci o délce videa v sekundách), šířce videa v
-      pixelech a výšce videa v pixelech.</xs:documentation>
+      pixelech a výšce videa v pixelech. Atribut datetime udává
+      datum a čas pořízení záznamu.</xs:documentation>
     </xs:annotation>
     <xs:all>
       <xs:element name="frames" type="frames-type">
@@ -80,6 +82,8 @@
         </xs:unique>
       </xs:element>
     </xs:all>
+    <xs:attribute name="datetime" type="xs:dateTime"
+    use="required" />
     <xs:attribute name="dirname" type="xs:string" use="required" />
     <xs:attribute name="uri" type="xs:anyURI" use="required" />
     <xs:attribute name="fps" type="xs:positiveInteger"
