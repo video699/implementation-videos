@@ -159,23 +159,23 @@
     <xs:annotation>
       <xs:documentation xml:lang="en">This element contains
       information about a single video frame. The number attribute
-      specifies the frame number, and the filename attribute
-      specifies the filename of the video frame with the slides
-      assuming the current working directory is the directory
-      specified by the dirname attribute of the ancestor video.
-      Note that you can derive the time of the frame by combining
-      this information with the fps attribute of the ancestor
-      video. The vgg256 attribute specifies feature vectors
-      describing the entire frame.</xs:documentation>
+      specifies the frame number (first frame has number 1), and
+      the filename attribute specifies the filename of the video
+      frame with the slides assuming the current working directory
+      is the directory specified by the dirname attribute of the
+      ancestor video.  Note that you can derive the time of the
+      frame by combining the frame number with the fps attribute of
+      the ancestor video. The vgg256 attribute specifies feature
+      vectors describing the entire frame.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
       veškeré informace o jednom snímku videozáznamu. Atribut
-      number udává číslo snímku, což lze využít pro výpočet času
-      snímku s využitím atributu fps předkovského elementu video, a
-      atribut filename zadává název souboru se snímkem videozáznamu
-      za předpokladu, že pracovním adresářem je adresář zadaný
-      atributem dirname předkovského elementu video. Atribut vgg256
-      zadává feature vektory popisující celý snímek
-      videa.</xs:documentation>
+      number udává číslo snímku (indexuje se od jedničky), což lze
+      využít pro výpočet času snímku s využitím atributu fps
+      předkovského elementu video a atribut filename zadává název
+      souboru se snímkem videozáznamu za předpokladu, že pracovním
+      adresářem je adresář zadaný atributem dirname předkovského
+      elementu video. Atribut vgg256 zadává feature vektory
+      popisující celý snímek videa.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="screens" type="screens-type" />
