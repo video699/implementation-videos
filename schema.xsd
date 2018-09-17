@@ -138,13 +138,13 @@
       <xs:documentation xml:lang="en">This element contains
       information about a single PDF document that accompanies a
       captured video. The filename attribute specifies the filename
-      of the video frame with the slides assuming the current
+      of the PDF document assuming the current
       working directory is the directory specified by the dirname
       attribute of the ancestor video.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
       veškeré informace o jednom PDF dokumentu, který doprovází
       konkrétní videozáznam. Atribut filename zadává název souboru
-      se snímkem videozáznamu za předpokladu, že pracovním
+      s PDF dokumentem za předpokladu, že pracovním
       adresářem je adresář zadaný atributem dirname předkovského
       elementu video.</xs:documentation>
     </xs:annotation>
@@ -160,7 +160,7 @@
       <xs:documentation xml:lang="en">This element contains
       information about a single video frame. The number attribute
       specifies the frame number (first frame has number 1), and
-      the filename attribute specifies the filename of the video
+      the filename attribute specifies the filename of the PDF
       frame with the slides assuming the current working directory
       is the directory specified by the dirname attribute of the
       ancestor video.  Note that you can derive the time of the
