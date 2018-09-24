@@ -138,15 +138,15 @@
       <xs:documentation xml:lang="en">This element contains
       information about a single PDF document that accompanies a
       captured video. The filename attribute specifies the filename
-      of the PDF document assuming the current
-      working directory is the directory specified by the dirname
-      attribute of the ancestor video.</xs:documentation>
+      of the PDF document assuming the current working directory is
+      the directory specified by the dirname attribute of the
+      ancestor video.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
       veškeré informace o jednom PDF dokumentu, který doprovází
       konkrétní videozáznam. Atribut filename zadává název souboru
-      s PDF dokumentem za předpokladu, že pracovním
-      adresářem je adresář zadaný atributem dirname předkovského
-      elementu video.</xs:documentation>
+      s PDF dokumentem za předpokladu, že pracovním adresářem je
+      adresář zadaný atributem dirname předkovského elementu
+      video.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="page" type="page-type" minOccurs="0"
@@ -163,7 +163,7 @@
       the filename attribute specifies the filename of the PDF
       frame with the slides assuming the current working directory
       is the directory specified by the dirname attribute of the
-      ancestor video.  Note that you can derive the time of the
+      ancestor video. Note that you can derive the time of the
       frame by combining the frame number with the fps attribute of
       the ancestor video. The vgg256 attribute specifies feature
       vectors describing the entire frame.</xs:documentation>
@@ -209,19 +209,22 @@
       coordinates that specify the top left, top right, bottom
       left, and bottom right corners of a quadrilateral delineating
       the frame area occupied by the screen. Be aware that xi, yi
-      may go beyond the video boundaries. The vgg256 attribute
-      specifies feature vectors describing the contents of the
-      screen. The condition attribute specifies the condition of
-      what is shown on the screen.</xs:documentation>
+      may go beyond the video boundaries. The aspect-width and
+      aspect-height attributes specify the aspect ratio of the
+      screen. The vgg256 attribute specifies feature vectors
+      describing the contents of the screen. The condition
+      attribute specifies the condition of what is shown on the
+      screen.</xs:documentation>
       <xs:documentation xml:lang="cs">Tento element obsahuje
       veškeré informace o jednom ozářeném projekčním plátně, které
       se nachází na jednom snímku videozáznamu. Atributy xi, yi,
       i=0, 1, 2, 3, zadávají levý horní, pravý horní, levý dolní a
       pravý dolní roh čtyřúhelníku, který projekční plátno
       ohraničuje. Berte na vědomí, že souřadnice mohou přesahovat
-      okraje videa. Atribut vgg256 zadává feature vektory
-      popisující obsah plátna. Atribut condition udává kvalitu
-      toho, co je zobrazeno na ozářeném projekčním
+      okraje videa. Atributy aspect-width a aspect-height zadávají
+      poměr stran projekčního plátna. Atribut vgg256 zadává feature
+      vektory popisující obsah plátna. Atribut condition udává
+      kvalitu toho, co je zobrazeno na ozářeném projekčním
       plátně.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -235,9 +238,13 @@
     <xs:attribute name="y2" type="xs:integer" use="required" />
     <xs:attribute name="x3" type="xs:integer" use="required" />
     <xs:attribute name="y3" type="xs:integer" use="required" />
-    <xs:attribute name="condition" type="condition-type"
+    <xs:attribute name="aspect-width" type="xs:positiveInteger"
+    use="required" />
+    <xs:attribute name="aspect-height" type="xs:positiveInteger"
     use="required" />
     <xs:attribute name="vgg256" type="feature-vector-type"
+    use="required" />
+    <xs:attribute name="condition" type="condition-type"
     use="required" />
   </xs:complexType>
   <xs:complexType name="keyrefs-type">
