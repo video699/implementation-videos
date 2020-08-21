@@ -4,7 +4,6 @@ jobs:
     working_directory: ~/repo
     docker:
     - image: circleci/build-image:ubuntu-14.04-XXL-upstart-1189-5614f37
-      command: /sbin/init
     steps:
     - restore_cache:
         key: implementation-dataset-{{ .Branch }}
@@ -14,7 +13,7 @@ jobs:
         sudo apt-get -o dir::cache::archives="$HOME"/apt-cache update
         sudo apt-get -o dir::cache::archives="$HOME"/apt-cache install libxml2-utils
     - save_cache:
-        key: implementation-dataset-2017-{{ .Branch }}
+        key: implementation-dataset-{{ .Branch }}
         paths:
         - ~/apt-cache/partial
     - checkout
