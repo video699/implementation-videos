@@ -1,0 +1,23 @@
+name: Test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+env:
+  DEBIAN_FRONTEND: noninteractive
+jobs:
+  validation:
+    name: Validation
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.7
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install xmllint
+        run: |
+          set -ex
+          apt-get -qy update
+          apt-get install -qy libxml2-utils
+      - name: Run validation
+        run: xmllint --noout --schema schema.xsd --xinclude dataset.xml

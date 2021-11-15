@@ -1,5 +1,6 @@
-.. image:: https://circleci.com/gh/video699/implementation-videos/tree/master.svg?style=shield
-    :target: https://circleci.com/gh/video699/implementation-videos/tree/master
+.. image:: https://github.com/video699/implementation-videos/actions/workflows/test.yml/badge.svg
+      :target: https://github.com/video699/implementation-videos/actions/workflows/test.yml
+      :alt: Continuous Integration
 
 This is an XML dataset of *17 lecture recordings* randomly sampled from the
 lectures recorded at the `Faculty of Informatics, Brno, Czechia
@@ -11,7 +12,7 @@ projection screen annotations*, and *925 lecture materials*. Video frames and
 lecture materials are encoded as 8-bit PNG images.
 
 .. image:: schema.png
-    :target: schema.png
+      :target: schema.png
 
 The XML schema ``schema.xsd`` describes the structure of the dataset. Section
 3 of [Novotny18]_ describes the details of building the dataset.  The `linked
